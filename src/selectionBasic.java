@@ -12,17 +12,32 @@ public class selectionBasic {
         int entY;
         String[][] arreio = new String[11][11];
         for (String[] row : arreio)
-            Arrays.fill(row, "0");
-        arreio[0][0] = "A";
-        arreio[0][1] = "B";
-        arreio[0][2] = "C";
-        arreio[0][3] = "D";
-        arreio[0][4] = "E";
-        arreio[0][5] = "F";
-        arreio[0][6] = "G";
-        arreio[0][7] = "H";
-        arreio[0][8] = "I";
-        arreio[0][9] = "J";
+            Arrays.fill(row, "░");
+        arreio[0][0] = "  ";
+        arreio[0][1] = "A";
+        arreio[0][2] = "B";
+        arreio[0][3] = "C";
+        arreio[0][4] = "D";
+        arreio[0][5] = "E";
+        arreio[0][6] = "F";
+        arreio[0][7] = "G";
+        arreio[0][8] = "H";
+        arreio[0][9] = "I";
+        arreio[0][10] = "J";
+
+        arreio[1][0] = " 1";
+        arreio[2][0] = " 2";
+        arreio[3][0] = " 3";
+        arreio[4][0] = " 4";
+        arreio[5][0] = " 5";
+        arreio[6][0] = " 6";
+        arreio[7][0] = " 7";
+        arreio[8][0] = " 8";
+        arreio[9][0] = " 9";
+        arreio[10][0] = "10";
+
+        arreio[10][10] = "☻";
+
 
         do{
             System.out.println(campVisualization(arreio) + System.lineSeparator());
@@ -47,39 +62,40 @@ public class selectionBasic {
         int entXParsed;
         switch (entX.toUpperCase()) {
             case "A":
-                entXParsed = 0;
-                break;
-            case "B":
                 entXParsed = 1;
                 break;
-            case "C":
+            case "B":
                 entXParsed = 2;
                 break;
-            case "D":
+            case "C":
                 entXParsed = 3;
                 break;
-            case "E":
+            case "D":
                 entXParsed = 4;
                 break;
-            case "F":
+            case "E":
                 entXParsed = 5;
                 break;
-            case "G":
+            case "F":
                 entXParsed = 6;
                 break;
-            case "H":
+            case "G":
                 entXParsed = 7;
                 break;
-            case "I":
+            case "H":
                 entXParsed = 8;
                 break;
-            case "J":
+            case "I":
                 entXParsed = 9;
+                break;
+            case "J":
+                entXParsed = 10;
                 break;
 
                 default:
                     throw new IllegalArgumentException("Tipo de entrada inserida invalida");
         }
-        array[entY - 1][entXParsed] = "1";
+        if (array[entY][entXParsed].equals("░") || array[entY][entXParsed].equals("▒")) array[entY][entXParsed] = "▒";
+        else array[entY][entXParsed] = "┼";
     }
 }
