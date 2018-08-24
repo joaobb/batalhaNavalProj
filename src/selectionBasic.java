@@ -10,34 +10,10 @@ public class selectionBasic {
         Scanner inp = new Scanner(System.in);
         String entX;
         int entY;
+
         String[][] arreio = new String[11][11];
-        for (String[] row : arreio)
-            Arrays.fill(row, "░");
-        arreio[0][0] = "  ";
-        arreio[0][1] = "A";
-        arreio[0][2] = "B";
-        arreio[0][3] = "C";
-        arreio[0][4] = "D";
-        arreio[0][5] = "E";
-        arreio[0][6] = "F";
-        arreio[0][7] = "G";
-        arreio[0][8] = "H";
-        arreio[0][9] = "I";
-        arreio[0][10] = "J";
 
-        arreio[1][0] = " 1";
-        arreio[2][0] = " 2";
-        arreio[3][0] = " 3";
-        arreio[4][0] = " 4";
-        arreio[5][0] = " 5";
-        arreio[6][0] = " 6";
-        arreio[7][0] = " 7";
-        arreio[8][0] = " 8";
-        arreio[9][0] = " 9";
-        arreio[10][0] = "10";
-
-        arreio[10][10] = "☻";
-
+        construtorDeTabuleiro1(arreio);
 
         do{
             System.out.println(campVisualization(arreio) + System.lineSeparator());
@@ -97,5 +73,35 @@ public class selectionBasic {
         }
         if (array[entY][entXParsed].equals("░") || array[entY][entXParsed].equals("▒")) array[entY][entXParsed] = "▒";
         else array[entY][entXParsed] = "┼";
+    }
+
+    public static void construtorDeTabuleiro1(String[][] array) {
+        for (String[] row : array)
+            Arrays.fill(row, "░");
+        array[0][0] = "  ";
+        array[0][1] = "A";
+        array[0][2] = "B";
+        array[0][3] = "C";
+        array[0][4] = "D";
+        array[0][5] = "E";
+        array[0][6] = "F";
+        array[0][7] = "G";
+        array[0][8] = "H";
+        array[0][9] = "I";
+        array[0][10] = "J";
+
+        array[1][0] = " 1";
+        array[2][0] = " 2";
+        array[3][0] = " 3";
+        array[4][0] = " 4";
+        array[5][0] = " 5";
+        array[6][0] = " 6";
+        array[7][0] = " 7";
+        array[8][0] = " 8";
+        array[9][0] = " 9";
+        array[10][0] = "10";
+
+        array[10][10] = "☻";
+
     }
 }
